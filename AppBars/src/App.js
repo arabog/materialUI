@@ -3,6 +3,10 @@ import UndesrstndingBrkpts from './components/Grid'
 import FillingSpace from './components/Grid2'
 
 import AbsConAndItem from './components/Grid3'
+import FixedColumnLayout from './components/Grid4'
+
+import HeaderFooter from './components/Grid5'
+import ColumnDirection from './components/Grid6'
 
 
 function App() {
@@ -10,14 +14,23 @@ function App() {
 
 	return (
 		<div>
-			<div>1</div>
 			<UndesrstndingBrkpts />
+			<hr style={{marginBottom: '50px'}}/>
 
-			<div>2</div>
 			<FillingSpace />
+			<hr style={{marginBottom: '50px'}}  />
 
-			<div>3</div>
 			<AbsConAndItem />
+			<hr style={{marginBottom: '50px'}}  />
+
+			<FixedColumnLayout />
+			<hr style={{marginBottom: '50px'}}  />
+
+			<HeaderFooter />
+			<hr style={{marginBottom: '50px'}}  />
+
+			<ColumnDirection />
+			<hr style={{marginBottom: '50px'}}  />
 		</div>
 	);
 }

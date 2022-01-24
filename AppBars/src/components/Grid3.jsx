@@ -30,10 +30,10 @@ const AbsContainerAndItem = withStyles(styles) (({ classes, justifyContent }) =>
 
                     <Container spacing={4} >
 
-                              <Item md={12}>
+                              <Item md={6}>
                                         <Paper className={classes.paper} >
 
-                                                  <Item container justifyContent='space-around' >
+                                                  <Container container direction="row" spacing={2} justifyContent='space-around' >
                                                             <Item>
                                                                       <Chip label="xs=12" />
                                                             </Item>
@@ -45,15 +45,15 @@ const AbsContainerAndItem = withStyles(styles) (({ classes, justifyContent }) =>
                                                             <Item>
                                                                       <Chip label="md=3" />
                                                             </Item>
-                                                  </Item>
+                                                  </Container>
 
                                         </Paper>
                               </Item>
 
-                              <Item md={12} >
+                              <Item md={6} >
                                         <Paper className={classes.paper} >
 
-                                                  <Item container justifyContent='space-around' >
+                                                  <Container container direction="row" spacing={2} justifyContent='space-around' >
                                                             <Item>
                                                                       <Chip label="xs=12" />
                                                             </Item>
@@ -65,15 +65,15 @@ const AbsContainerAndItem = withStyles(styles) (({ classes, justifyContent }) =>
                                                             <Item>
                                                                       <Chip label="md=3" />
                                                             </Item>
-                                                  </Item>
+                                                  </Container>
 
                                         </Paper>
                               </Item>
 
-                              <Item md={12} >
+                              <Item md={6} >
                                         <Paper className={classes.paper} >
 
-                                                  <Item container justifyContent='space-around' >
+                                                  <Container container direction="row" spacing={2} justifyContent='space-around' >
                                                             <Item>
                                                                       <Chip label="xs=12" />
                                                             </Item>
@@ -85,15 +85,15 @@ const AbsContainerAndItem = withStyles(styles) (({ classes, justifyContent }) =>
                                                             <Item>
                                                                       <Chip label="md=3" />
                                                             </Item>
-                                                  </Item>
+                                                  </Container>
 
                                         </Paper>
                               </Item>
 
-                              <Item md={12}>
+                              <Item md={6}>
                                         <Paper className={classes.paper} >
 
-                                                  <Item container justifyContent='space-around' >
+                                                  <Container container direction="row" spacing={2} justifyContent='space-around' >
                                                             <Item >
                                                                       <Chip label="xs=12" />
                                                             </Item>
@@ -105,7 +105,7 @@ const AbsContainerAndItem = withStyles(styles) (({ classes, justifyContent }) =>
                                                             <Item>
                                                                       <Chip label="md=3" />
                                                             </Item>
-                                                  </Item>
+                                                  </Container>
 
                                         </Paper>
                               </Item>
