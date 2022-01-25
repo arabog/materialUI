@@ -1,4 +1,5 @@
 import './App.css';
+import FixedPos from "./components/FixedPos"
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
 	return (
 		<div className="App">
-			MUI
+			<FixedPos />
 		</div>
 	);
 }
