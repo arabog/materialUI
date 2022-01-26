@@ -8,62 +8,54 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-const styles = theme => ({
-          root: {
-                    flexGrow: 1
-          },
+// https://mui.com/components/app-bar/
 
-          flex: {
-                    flex: 1
-          },
+const styles = (theme) => ({
+  root: {
+    flexGrow: 1,
+  },
 
-          menuButton: {
-                    marginLeft: -12,
-                    marginRight: 20
-          }
+  flex: {
+    flex: 1,
+  },
 
-})
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
 
+  toolbarMargin: theme.mixins.toolbar,
+});
 
-const FixedPosition = withStyles(styles) (({classes}) => (
-          <div className ={classes.root}>
+const FixedPosition = withStyles(styles)(({ classes }) => (
+  <div className={classes.root}>
+    <AppBar position="fixed">
+      <Toolbar>
+        <IconButton
+          className={classes.menuButton}
+          color="inherit"
+          aria-label="Menu"
+        />
 
-                    <AppBar position="fixed" >
+        <MenuIcon />
 
-                              <Toolbar>
-                                        <IconButton 
-                                                  className = {classes.menuButton}
-                                                  color="inherit"
-                                                  aria-label="Menu"
-                                        />
+        <Typography variant="title" color="inherit" className={classes.flex}>
+          HUGB
+        </Typography>
 
-                                        <MenuIcon />
+        <Button color="inherit">Login</Button>
+      </Toolbar>
+    </AppBar>
 
-                                        <Typography
-                                                  variant = "title"
-                                                  color ="inherit"
-                                                  className = {classes.flex}
-                                        >
-                                                  HUGB
-                                        </Typography>
+    {/* prevent d begining of d content from hidding */}
+    <div className={classes.toolbarMargin}></div>
 
-                                        <Button color="inherit">Login</Button> 
-
-                              </Toolbar>
-
-                    </AppBar>
-
-                    <ul>
-                              {
-                                        new Array(500).fill(null).map((v, i) => (
-                                                  <li key={i}>{i}</li>
-                                        ))
-                              }
-                    </ul>
-
-          </div>
-))
-
-
+    <ul>
+      {new Array(500).fill(null).map((v, i) => (
+        <li key={i}>{i}</li>
+      ))}
+    </ul>
+  </div>
+));
 
 export default FixedPosition;
