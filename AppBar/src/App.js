@@ -1,16 +1,15 @@
 import './App.css';
-import FixedPos from "./components/FixedPos"
-
+// import FixedPos from './components/FixedPos';
+import BackToTop from './components/HideOnScr';
 
 function App() {
+  return (
+    <div className="App">
+      {/* <FixedPos /> */}
 
-
-	return (
-		<div className="App">
-			<FixedPos />
-		</div>
-	);
+      <BackToTop />
+    </div>
+  );
 }
-
 
 export default App;
