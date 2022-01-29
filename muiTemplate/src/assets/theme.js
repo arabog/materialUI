@@ -38,13 +38,46 @@ const theme = createTheme({
                                                   // Some CSS
                                                   fontSize: '1rem',
                                         },
+
+                                        secondary: {
+                                                  color: 'purple',
+
+                                                  '&:hover': {
+                                                            color: 'white'
+                                                  }
+                                        }
                               },
-                    },          
+                    },  
+                    
+                    MuiAppBar: {
+                              styleOverrides: {
+                                        // Name of the slot
+                                        root: {
+                                                  // Some CSS
+                                                  background: dangerColor,
+
+                                                  marginBottom: 15,
+                                        },
+
+                              },
+                    },  
+
+                    MuiCard: {
+                              styleOverrides: {
+                                        // Name of the slot
+                                        root: {
+                                                  // Some CSS
+                                                  margin: 20,
+                                        },
+
+                              },
+                    },  
           },
 }) ;
 
 
 export default theme;
+
 
 
 

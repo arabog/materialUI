@@ -18,7 +18,13 @@ function App() {
 			<div className="App">
 				<UsingTheme />
 
-				<ImageCard />
+				<div className="container">
+					<ImageCard />
+
+					<ImageCard />
+
+					<ImageCard />
+				</div>
 
 				<Navbar />
 

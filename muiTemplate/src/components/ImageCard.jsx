@@ -17,7 +17,7 @@ const ImageCard = () => {
 
           return (
                     
-                    <Card sx={{p: 10 }}>
+                    <Card sx={{ maxWidth: 345 }}>
 
                               <CardMedia
                                         component="img"
