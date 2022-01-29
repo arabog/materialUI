@@ -1,17 +1,27 @@
 import './App.css';
-import ImageCard from './components/ImageCard';
 
+import { ThemeProvider } from '@mui/material';
+import theme from './assets/theme'
+
+
+import ImageCard from './components/ImageCard';
 import Navbar from './components/Navbar'
+import UsingTheme from './components/UsingTheme'
 
 
 function App() {
+
+
 	return (
-		<div className="App">
+		<ThemeProvider theme={theme}>
+			<div className="App">
+				<UsingTheme />
 
-			<Navbar />
+				<ImageCard />
 
-			<ImageCard />
-		</div>
+				<Navbar />
+			</div>
+		</ThemeProvider>
 	);
 }
 
