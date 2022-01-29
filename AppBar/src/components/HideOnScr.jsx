@@ -8,6 +8,8 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Fade from '@material-ui/core/Fade';
 
+// https://reactjs.org/docs/hooks-faq.html
+
 const styles = (theme) => ({
 	root: {
 		flexGrow: 1,
@@ -30,7 +32,7 @@ const ScrolledAppBar = withStyles(styles)(
 
 		state = {
 			scrolling: false,
-			scrollTop: 2000,
+			scrollTop: 0,
 		};
 
 		onScroll = (e) => {
@@ -40,10 +42,17 @@ const ScrolledAppBar = withStyles(styles)(
 			}));
 		};
 
+		// useMemo
 		shouldComponentUpdate(props, state) {
 			return this.state.scrolling !== state.scrolling;
 		}
 
+		/*
+			componentDidMount, componentDidUpdate, 
+			componentWillUnmount: The useEffect Hook 
+			can express all combinations of these (including 
+			less common cases).
+		*/ 
 		componentDidMount() {
 			window.addEventListener('scroll', this.onScroll);
 		}
