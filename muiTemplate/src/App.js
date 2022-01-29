@@ -1,12 +1,13 @@
 import './App.css';
 
-import { ThemeProvider } from '@mui/material';
 import theme from './assets/theme'
+import { ThemeProvider } from '@mui/material/styles';
 
 
 import ImageCard from './components/ImageCard';
 import Navbar from './components/Navbar'
 import UsingTheme from './components/UsingTheme'
+
 
 
 function App() {
@@ -20,9 +21,20 @@ function App() {
 				<ImageCard />
 
 				<Navbar />
+
 			</div>
 		</ThemeProvider>
 	);
 }
 
 export default App;
+
+
+
+/*
+MuiButtonBase-root 
+MuiFab-root 
+MuiFab-extended 
+MuiFab-sizeSmall 
+MuiFab-secondary 
+*/

@@ -19,7 +19,7 @@ export default function ButtonAppBar() {
                                                   <IconButton
                                                             size="large"
                                                             edge="start"
-                                                            color="inherit"
+                                                            color="secondary"
                                                             aria-label="menu"
                                                             sx={{ mr: 2 }}
                                                   >
@@ -30,7 +30,7 @@ export default function ButtonAppBar() {
                                                             News
                                                   </Typography>
 
-                                                  <Button color="inherit">Login</Button>
+                                                  <Button color="error">Login</Button>
                                         </Toolbar>
                               </AppBar>
                     </Box>
