@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { 
+import {
           AppBar,
           Avatar,
           Button,
@@ -11,29 +11,23 @@ import {
           Box,
           IconButton,
           Menu,
-          MenuItem
+          MenuItem,
 } from '@mui/material';
 
-import { 
-          MenuIcon,
-
-} from '@mui/icons-material'
-
+import MenuIcon from '@mui/icons-material/Menu';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-
 const Navbar = () => {
+          const [anchorElNav, setAnchorElNav] = React.useState(null);
+          const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-          const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-          const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-
-          const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+          const handleOpenNavMenu = (event) => {
                     setAnchorElNav(event.currentTarget);
           };
 
-          const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+          const handleOpenUserMenu = (event) => {
                     setAnchorElUser(event.currentTarget);
           };
 
@@ -45,14 +39,10 @@ const Navbar = () => {
                     setAnchorElUser(null);
           };
 
-
           return (
                     <AppBar position="static">
-
                               <Container maxWidth="xl">
-
                                         <Toolbar disableGutters>
-
                                                   <Typography
                                                             variant="h6"
                                                             noWrap
@@ -61,7 +51,7 @@ const Navbar = () => {
                                                   >
                                                             LOGO
                                                   </Typography>
-                                        
+
                                                   <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                                                             <IconButton
                                                                       size="large"
@@ -89,7 +79,7 @@ const Navbar = () => {
                                                                                 vertical: 'top',
                                                                                 horizontal: 'left',
                                                                       }}
-
+                                                                      
                                                                       open={Boolean(anchorElNav)}
                                                                       onClose={handleCloseNavMenu}
 
@@ -125,14 +115,12 @@ const Navbar = () => {
                                                                       </Button>
                                                             ))}
                                                   </Box>
-                                        
+
                                                   <Box sx={{ flexGrow: 0 }}>
                                                             <Tooltip title="Open settings">
-                                                            
                                                                       <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                                                                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                                                                       </IconButton>
-
                                                             </Tooltip>
 
                                                             <Menu
@@ -167,6 +155,5 @@ const Navbar = () => {
                     </AppBar>
           );
 };
-
 
 export default Navbar;

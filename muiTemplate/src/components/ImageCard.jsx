@@ -8,7 +8,7 @@ import {
           CardContent, 
           Typography, 
           CardActions, 
-          Button
+          Fab
 } from '@mui/material'
 
 
@@ -25,7 +25,7 @@ const ImageCard = () => {
                                         image={iguana}
                                         alt="green iguana"
                               />
-
+ 
                               <CardContent>
                                         <Typography gutterBottom variant="h5" component="div">
                                                   Lizard
@@ -38,9 +38,9 @@ const ImageCard = () => {
                               </CardContent>
 
                               <CardActions>
-                                        <Button size="small">Share</Button>
+                                        <Fab size="small" variant="extended" color='primary'>Share</Fab>
 
-                                        <Button size="small">Learn More</Button>
+                                        <Fab size="small" variant="extended" color='secondary'>Learn More</Fab>
                               </CardActions>
                     </Card>
           );
