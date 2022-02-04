@@ -2,21 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+import Authentication from './components/pages/Authentication';
+import Storage from './components/pages/Storage';
+import Database from './components/pages/Database';
+import Function from './components/pages/Functions';
+import Hosting from './components/pages/Hosting';
+import Machine from './components/pages/Machine';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <Router>
     <Routes>
-      <Route path="/" element={<App />} />
-      {/* <Route path="/authorization" element={<Expenses />} /> */}
-      {/* <Route path="invoices" element={<Invoices />} /> */}
-    </Routes>
-  </Router>
-);
+      <Route path="/" element={<App />}>
+        <Route path="/authentication" element={<Authentication />} />
+        <Route path="/storage" element={<Storage />} />
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+        <Route path="database" element={<Database />} />
+        <Route path="functions" element={<Function />} />
+
+        <Route path="hosting" element={<Hosting />} />
+        <Route path="machine-learning" element={<Machine />} />
+      </Route>
+    </Routes>
+  </Router>,
+
+  document.getElementById('root')
+);

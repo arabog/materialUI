@@ -1,4 +1,4 @@
-import { PeopleAltIcon } from '@mui/icons-material/PeopleAlt';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import StorageIcon from '@mui/icons-material/Storage';
 import AddCardIcon from '@mui/icons-material/AddCard';
 import AllInboxIcon from '@mui/icons-material/AllInbox';

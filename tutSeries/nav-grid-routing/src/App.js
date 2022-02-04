@@ -1,14 +1,16 @@
 import './App.css';
 
 import Navbar from './components/Navbar';
+import Grid from '@mui/material/Grid';
 
 // https://reactrouter.com/docs/en/v6/getting-started/tutorial
 
 function App() {
   return (
-    <div className="App">
+    <Grid container className="App">
       <Navbar />
-    </div>
+      Home Page
+    </Grid>
   );
 }
 
