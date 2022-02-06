@@ -13,22 +13,32 @@ import Function from './components/pages/Functions';
 import Hosting from './components/pages/Hosting';
 import Machine from './components/pages/Machine';
 
+import { ThemeProvider } from '@mui/material/styles'
+
+import { dashboardTheme } from './dashboardTheme';
+
+
 
 ReactDOM.render(
-	<Router>
-		<Routes>
-			<Route path="/" exact element={<App />} >
-				<Route path="authentication" element={<Authentication />} />
-				<Route path="storage" element={<Storage />} />
 
-				<Route path="database" element={<Database />} />
-				<Route path="functions" element={<Function />} />
 
-				<Route path="hosting" element={<Hosting />} />
-				<Route path="machine-learning" element={<Machine />} />
-			</Route>
-		</Routes>
-	</Router>,
+
+	<ThemeProvider theme={dashboardTheme}>
+		<Router>
+			<Routes>
+				<Route path="/" exact element={<App />} >
+					<Route path="authentication" element={<Authentication />} />
+					<Route path="storage" element={<Storage />} />
+
+					<Route path="database" element={<Database />} />
+					<Route path="functions" element={<Function />} />
+
+					<Route path="hosting" element={<Hosting />} />
+					<Route path="machine-learning" element={<Machine />} />
+				</Route>
+			</Routes>
+		</Router>
+	</ThemeProvider>,
 	
 	document.getElementById('root')
 );
