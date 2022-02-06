@@ -12,5 +12,18 @@ export const dashboardTheme = createTheme(
                                         },
                               },
                     },
+
+                    palette: {
+                              primary: {
+                                        main: '#bada55'
+                              },
+                    },
+
+                    typography: {
+                              fontFamily: [
+                                        'Roboto',
+                                        '"Helvetica Neue"'
+                              ].join(', ')
+                    },
           }
 )

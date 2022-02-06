@@ -20,8 +20,8 @@ const Authentication = () => {
 		},
 
 		'&.MuiButton-outlined': {
-			color: "#fff",
-			borderColor: '#fff',
+			color: "#000",
+			borderColor: '#333fff',
 
 			'&:hover': {
 				backgroundColor: 'transparent'
@@ -34,21 +34,28 @@ const Authentication = () => {
 		<Grid item xs={8} style={{ marginLeft: '70px' }}>
 			This is authentication page.
 
-			{/* <div style={{display: "flex", flexDirection: "column"}}> */}
-				<CommonButton
-					sx = {buttonStyles}
-					variant = 'contained'
-				>
-					Add User A
-				</CommonButton>
+			<CommonButton
+				sx = {buttonStyles}
+				variant = 'contained'
+			>
+				Add User A
+			</CommonButton>
 
-				<CommonButton
-					sx = {buttonStyles}
-					variant="outlined"
-				>
-					Add User B
-				</CommonButton>
-			{/* </div> */}
+			<CommonButton
+				size="large"
+				sx = {buttonStyles}
+				variant="outlined"
+			>
+				Add User B
+			</CommonButton>
+
+			<CommonButton
+				variant="contained"
+				// color="secondary"
+				color="primary"
+			>
+				Add User C
+			</CommonButton>
 		</Grid>
 	)
 };
