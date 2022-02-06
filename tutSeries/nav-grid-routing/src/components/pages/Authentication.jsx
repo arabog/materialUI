@@ -1,7 +1,15 @@
 import React from 'react';
+import Grid from '@mui/material/Grid';
+
 
 const Authentication = () => {
-  return <div style={{ marginLeft: '500px' }}>Authentication</div>;
+
+
+	return (
+		<Grid item xs={8} style={{ marginLeft: '70px' }}>
+			This is authentication page.
+		</Grid>
+	)
 };
 
 export default Authentication;

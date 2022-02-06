@@ -1,7 +1,17 @@
 import React from 'react';
+import Grid from '@mui/material/Grid';
 
-const MachineLearning = () => {
-  return <div style={{ marginLeft: '500px' }}>Machine Learning</div>;
+
+const Machine = () => {
+
+
+	return (
+		<Grid item xs={8} style={{ marginLeft: '70px' }}>
+			This is Machine page.
+		</Grid>
+	)
 };
 
-export default MachineLearning;
+export default Machine;
+
+

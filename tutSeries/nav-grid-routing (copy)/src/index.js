@@ -12,22 +12,21 @@ import Machine from './components/pages/Machine';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
 ReactDOM.render(
-	<Router>
-		<Routes>
-			<Route path="/" element={<App />}>
-			<Route path="/authentication" element={<Authentication />} />
-			<Route path="/storage" element={<Storage />} />
+  <Router>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route path="/authentication" element={<Authentication />} />
+        <Route path="/storage" element={<Storage />} />
 
-			<Route path="database" element={<Database />} />
-			<Route path="functions" element={<Function />} />
+        <Route path="database" element={<Database />} />
+        <Route path="functions" element={<Function />} />
 
-			<Route path="hosting" element={<Hosting />} />
-			<Route path="machine-learning" element={<Machine />} />
-			</Route>
-		</Routes>
-	</Router>,
+        <Route path="hosting" element={<Hosting />} />
+        <Route path="machine-learning" element={<Machine />} />
+      </Route>
+    </Routes>
+  </Router>,
 
-	document.getElementById('root')
+  document.getElementById('root')
 );
